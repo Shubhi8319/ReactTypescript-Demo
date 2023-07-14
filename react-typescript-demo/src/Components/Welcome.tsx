@@ -3,11 +3,10 @@ type GuestName = {
     nameCount?: number
 }
 
-export const Welcome = (props: GuestName) => {
-    const {nameCount = 0} = props
+export const Welcome = ({name, nameCount = 0}: GuestName) => {
     return(
         <div>
-            <h1>Welcome {props.name} to the React Typescript Demo Application !!!!! Your score is {nameCount}</h1>                 
+            <h1>Welcome {name} to the React Typescript Demo Application !!!!! Your score is {nameCount}</h1>                 
         </div>
     )
 }

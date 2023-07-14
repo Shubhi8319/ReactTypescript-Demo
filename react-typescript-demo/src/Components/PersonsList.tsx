@@ -1,14 +1,13 @@
+import { Name } from "./Person.types"
+
 type GuestArray = {
-    names: {
-         first: string
-         last: string
-     }[]
+    names: Name[]
  }
 
-export const Persons = (props: GuestArray) =>{
+export const PersonsList = ({ names }: GuestArray) =>{
     return (
        <div>
-       {  props.names.map((name)=>
+       {  names.map((name)=>
         { return (<h2 key={name.first}>Welcome {name.first} {name.last}</h2>)})}
        </div>
     )

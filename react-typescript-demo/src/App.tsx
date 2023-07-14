@@ -3,7 +3,8 @@ import { AdvancedProps } from './Components/AdvancedProps';
 import { Button } from './Components/Button';
 import { Heading } from './Components/Heading';
 import { Input } from './Components/Input';
-import { Persons } from './Components/Persons';
+import { Person } from './Components/Person';
+import { PersonsList } from './Components/PersonsList';
 import { Status } from './Components/Status';
 import { Welcome } from './Components/Welcome';
 
@@ -28,7 +29,7 @@ function App() {
     <div className="App">
       <Status status='success'/>
       <Welcome name='Shubhangi'/>
-      <Persons names={namesObj}/>
+      <PersonsList names={namesObj}/>
       <Heading>Advanced Props Types in React Typescript:</Heading>
       {
         propsTypesNames.map((propTypeName) => {
@@ -37,6 +38,7 @@ function App() {
       }
       <Button handleClick={(event) => console.log("Clicked", event)}/>
       <Input handleChange={(event) => console.log(event.target.value)}/>
+      <Person name={{first: "Roy", last: "Jon" }}/>
     </div>
   );
 }

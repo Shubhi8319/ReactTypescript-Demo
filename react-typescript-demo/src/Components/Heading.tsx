@@ -2,8 +2,8 @@ type HeadingProps = {
     children: string
 }
 
-export const Heading = (props: HeadingProps) => {
+export const Heading = ({children}: HeadingProps) => {
     return(
-        <h3>{props.children}</h3>
+        <h3>{children}</h3>
     )
 }
