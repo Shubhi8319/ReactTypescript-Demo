@@ -6,6 +6,6 @@ type AdvancedPropTypes = {
 
 export const AdvancedProps = (props: AdvancedPropTypes) => {
     return(
-        <a>{props.children}</a>
+        <div>{props.children}</div>
     ) 
 }
