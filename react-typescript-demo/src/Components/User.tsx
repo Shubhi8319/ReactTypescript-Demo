@@ -6,7 +6,7 @@ type AuthUser = {
 }
 
 export const User = () => {
-    const [user, setUser] = useState< AuthUser | null>(null)
+    const [user, setUser] = useState< AuthUser >({} as AuthUser)
     const handleLogin = () => {
         setUser({
             name: "Shubhangi",
@@ -14,14 +14,17 @@ export const User = () => {
         })
     }
     const handleLogout = () => {
-        setUser(null)
+        setUser({
+            name: "",
+            email: ""
+        })
     }
     return(
         <React.Fragment>
             <button onClick={handleLogin}>Log In</button>
             <button onClick={handleLogout}>Log Out</button>
-            {user?.name && <div>User Name is: {user?.name}</div>}
-            {user?.email && <div>User Email is: {user?.email}</div>}
+            {user.name !== '' &&  <div>User Name is: {user.name}</div>}
+            {user.email !== '' && <div>User Email is: { user.email}</div>}
         </React.Fragment>
     )
 }
