@@ -6,6 +6,7 @@ import { Input } from './Components/Input';
 import { Person } from './Components/Person';
 import { PersonsList } from './Components/PersonsList';
 import { Status } from './Components/Status';
+import { User } from './Components/User';
 import { Welcome } from './Components/Welcome';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <Button handleClick={(event) => console.log("Clicked", event)}/>
       <Input handleChange={(event) => console.log(event.target.value)}/>
       <Person name={{first: "Roy", last: "Jon" }}/>
+      <User/>
     </div>
   );
 }
