@@ -7,6 +7,8 @@ import { Heading } from './Components/Heading';
 import { Input } from './Components/Input';
 import { Person } from './Components/Person';
 import { PersonsList } from './Components/PersonsList';
+import { DemoRef } from './Components/ref/DemoRef';
+import { MutableRef } from './Components/ref/MutableRef';
 import { Status } from './Components/Status';
 import { Theme } from './Components/Theme';
 import { ThemeContextProvider } from './Components/ThemeContext';
@@ -51,7 +53,9 @@ function App() {
         <ContextUser/>
       </UserContextProvider>
       <Counter/>
-    </div>
+      <DemoRef/>
+      <MutableRef/>
+      </div>
     </ThemeContextProvider>
   );
 }
