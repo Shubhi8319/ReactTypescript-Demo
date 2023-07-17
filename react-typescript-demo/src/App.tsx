@@ -7,6 +7,8 @@ import { Input } from './Components/Input';
 import { Person } from './Components/Person';
 import { PersonsList } from './Components/PersonsList';
 import { Status } from './Components/Status';
+import { Theme } from './Components/Theme';
+import { ThemeContextProvider } from './Components/ThemeContext';
 import { User } from './Components/User';
 import { Welcome } from './Components/Welcome';
 
@@ -28,7 +30,8 @@ function App() {
     'Optional Type'
   ] 
   return (
-    <div className="App">
+    <ThemeContextProvider>
+      <div style={{backgroundColor: Theme.primary.main, color : Theme.primary.text}} className="App">
       <Status status='success'/>
       <Welcome name='Shubhangi'/>
       <PersonsList names={namesObj}/>
@@ -44,6 +47,7 @@ function App() {
       <User/>
       <Counter/>
     </div>
+    </ThemeContextProvider>
   );
 }
 
