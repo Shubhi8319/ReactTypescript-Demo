@@ -1,6 +1,7 @@
 import './App.css';
 import { AdvancedProps } from './Components/AdvancedProps';
 import { Button } from './Components/Button';
+import { ContextUser } from './Components/ContextUser';
 import { Counter } from './Components/Counter';
 import { Heading } from './Components/Heading';
 import { Input } from './Components/Input';
@@ -10,6 +11,7 @@ import { Status } from './Components/Status';
 import { Theme } from './Components/Theme';
 import { ThemeContextProvider } from './Components/ThemeContext';
 import { User } from './Components/User';
+import { UserContext, UserContextProvider } from './Components/UserContext';
 import { Welcome } from './Components/Welcome';
 
 function App() {
@@ -44,7 +46,10 @@ function App() {
       <Button handleClick={(event) => console.log("Clicked", event)}/>
       <Input handleChange={(event) => console.log(event.target.value)}/>
       <Person name={{first: "Roy", last: "Jon" }}/>
-      <User/>
+      {/* <User/> */}
+      <UserContextProvider>
+        <ContextUser/>
+      </UserContextProvider>
       <Counter/>
     </div>
     </ThemeContextProvider>
